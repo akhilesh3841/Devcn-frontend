@@ -16,7 +16,7 @@ const UserCard = ({ _id, firstName, gender, lastName, skills, age, about, photoU
 
     try {
       const res = await axios.post(
-        `http://localhost:3000/req/send/${status}/${toUserId}`,
+        `/api/req/send/${status}/${toUserId}`,
         {},
         { withCredentials: true }
       );
