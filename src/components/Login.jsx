@@ -7,8 +7,8 @@ import { toast } from 'react-toastify';
 import { motion } from 'framer-motion';
 
 const Login = () => {
-    const [emailId, setEmail] = useState('hardik@gmail.com');
-    const [password, setPassword] = useState('12345678');
+    const [emailId, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
