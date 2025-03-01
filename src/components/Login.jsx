@@ -39,7 +39,12 @@ const Login = () => {
             navigate('/');
         } catch (error) {
             console.error(error);
-            toast.error('Invalid credentials. Please sign up first.');
+            if(error.status===404){
+                toast.error('User not found. Please sign up first.');
+            }
+            else{
+                toast.error('Invalid credentials. Please try again.');
+            }
         }
     };
 
