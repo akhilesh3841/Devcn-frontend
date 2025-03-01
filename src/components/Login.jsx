@@ -23,7 +23,7 @@ const Login = () => {
     const loginhandler = async () => {
         try {
             const response = await axios.post(
-                'http://localhost:3000/login',
+                '/api/login',
                 {
                     emailId: emailId,
                     password: password,
