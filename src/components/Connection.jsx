@@ -11,7 +11,7 @@ const Connection = () => {
 
   const handleAcceptedRequest = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/userdata/pending/accepted", {
+      const response = await axios.get("/api/userdata/pending/accepted", {
         withCredentials: true
       });
       dispatch(addconnection(response.data.data));
