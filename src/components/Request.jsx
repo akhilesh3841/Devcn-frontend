@@ -12,7 +12,7 @@ const Request = () => {
   const reviewrequest = async (status, requestId) => {
     try {
       const response = await axios.post(
-        `/api/req/review/${status}/${requestId}`,
+        `http://localhost:3000/req/review/${status}/${requestId}`,
         {},
         { withCredentials: true }
       );
