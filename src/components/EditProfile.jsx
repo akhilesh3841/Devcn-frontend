@@ -24,7 +24,7 @@ const EditProfile = ({ firstName, lastName, about, age, gender, photoUrl, skills
 
     try {
       const response = await axios.patch(
-        "/api/profile/edit",
+        "http://localhost:3000/profile/edit",
         { firstName: fName, lastName: lName, about: aboutMe, age: ageVal, photoUrl: photo, gender: genderval },
         { withCredentials: true }
       );
