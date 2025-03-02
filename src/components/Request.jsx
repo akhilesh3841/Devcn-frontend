@@ -26,7 +26,7 @@ const Request = () => {
 
   const handlerequest = async () => {
     try {
-      const response = await axios.get("/api/userdata/pending/recived", {
+      const response = await axios.get("http://localhost:3000/userdata/pending/recived", {
         withCredentials: true,
       });
 
