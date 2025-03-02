@@ -36,7 +36,7 @@ const Signup = () => {
         };
 
         try {
-            const response = await axios.post("/api/api/register", userData, {
+            const response = await axios.post("http://localhost:3000/api/register", userData, {
                 withCredentials: true,
             });
 
