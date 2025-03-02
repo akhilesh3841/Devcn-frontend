@@ -5,6 +5,7 @@ import { addUser } from '../utils/userslice';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { motion } from 'framer-motion';
+import { Base_url } from '../utils/helper';
 
 const Login = () => {
     const [emailId, setEmail] = useState('');
@@ -23,7 +24,7 @@ const Login = () => {
     const loginhandler = async () => {
         try {
             const response = await axios.post(
-                '/api/login',
+                Base_url+'/login',
                 {
                     emailId: emailId,
                     password: password,
@@ -34,6 +35,7 @@ const Login = () => {
             );
 
             const userdata = response?.data;
+            console.log('User data:', userdata);
             dispatch(addUser(userdata));
             toast.success('Login successful!');
             navigate('/');
@@ -43,7 +45,7 @@ const Login = () => {
                 toast.error('User not found. Please sign up first.');
             }
             else{
-                toast.error('Invalid credentials. Please try again.');
+                toast.error('Invalid credentials.Check emailid and password.');
             }
         }
     };

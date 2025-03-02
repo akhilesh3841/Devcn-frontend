@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { addUser } from '../utils/userslice';
 import { toast } from 'react-toastify';
 import { motion } from 'framer-motion';
+import { Base_url } from '../utils/helper';
 
 const Signup = () => {
     const dispatch = useDispatch();
@@ -36,7 +37,7 @@ const Signup = () => {
         };
 
         try {
-            const response = await axios.post("/api/api/register", userData, {
+            const response = await axios.post(Base_url+"/api/register", userData, {
                 withCredentials: true,
             });
 
@@ -143,7 +144,7 @@ const Signup = () => {
                             </select>
                         </div>
                     </div>
-
+{/* 
                     <div className="form-control">
                         <label className="label font-semibold text-gray-700">Photo URL</label>
                         <input
@@ -154,9 +155,9 @@ const Signup = () => {
                             onChange={(e) => setPhoto(e.target.value)}
                             required
                         />
-                    </div>
+                    </div> */}
 
-                    <div className="form-control">
+                    {/* <div className="form-control">
                         <label className="label font-semibold text-gray-700">About</label>
                         <textarea
                             placeholder="Tell us about yourself"
@@ -165,7 +166,7 @@ const Signup = () => {
                             onChange={(e) => setAbout(e.target.value)}
                             required
                         />
-                    </div>
+                    </div> */}
 
                     <div className="form-control">
                         <label className="label font-semibold text-gray-700">Skills</label>

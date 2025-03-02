@@ -4,7 +4,7 @@ import { addrequest } from '../utils/requestslice';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
+import { Base_url } from '../utils/helper';
 const Request = () => {
   const userdata = useSelector((store) => store.request.request);
   const dispatch = useDispatch();
@@ -12,7 +12,7 @@ const Request = () => {
   const reviewrequest = async (status, requestId) => {
     try {
       const response = await axios.post(
-        `/api/req/review/${status}/${requestId}`,
+        `${Base_url}/req/review/${status}/${requestId}`,
         {},
         { withCredentials: true }
       );
@@ -26,7 +26,7 @@ const Request = () => {
 
   const handlerequest = async () => {
     try {
-      const response = await axios.get("/api/userdata/pending/recived", {
+      const response = await axios.get(Base_url+"/userdata/pending/recived", {
         withCredentials: true,
       });
 
@@ -95,7 +95,7 @@ const Request = () => {
             >
               <img
                 className="w-20 h-20 rounded-full border-2 border-gray-300"
-                src={photoUrl || 'https://via.placeholder.com/100'}
+                src={photoUrl || 'https://static.vecteezy.com/system/resources/previews/021/548/095/original/default-profile-picture-avatar-user-avatar-icon-person-icon-head-icon-profile-picture-icons-default-anonymous-user-male-and-female-businessman-photo-placeholder-social-network-avatar-portrait-free-vector.jpg'}
                 alt="User"
               />
               <div className="ml-4 flex-1">

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addFeed } from "../utils/feedslice";
 import { motion, AnimatePresence } from "framer-motion"; // Import Framer Motion
 import UserCard from "./UserCard";
+import { Base_url } from "../utils/helper";
 
 const Feed = () => {
   const dispatch = useDispatch();
@@ -12,7 +13,7 @@ const Feed = () => {
   // Fetch feed data
   const getfeed = async () => {
     try {
-      const res = await axios.get("/api/userdata/feed", {
+      const res = await axios.get(Base_url+"/userdata/feed", {
         withCredentials: true,
       });
       dispatch(addFeed(res.data.data));

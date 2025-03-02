@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import Profilecard from "./Profilecard";
 import { motion } from "framer-motion"; 
+import { Base_url } from "../utils/helper";
 
 const EditProfile = ({ firstName, lastName, about, age, gender, photoUrl, skills }) => {
   const [fName, setFName] = useState(firstName || "");
@@ -24,7 +25,7 @@ const EditProfile = ({ firstName, lastName, about, age, gender, photoUrl, skills
 
     try {
       const response = await axios.patch(
-        "/api/profile/edit",
+        Base_url+"/profile/edit",
         { firstName: fName, lastName: lName, about: aboutMe, age: ageVal, photoUrl: photo, gender: genderval },
         { withCredentials: true }
       );
@@ -71,7 +72,7 @@ const EditProfile = ({ firstName, lastName, about, age, gender, photoUrl, skills
           >
             <img
               className="w-32 h-32 object-cover rounded-full border-4 border-gray-300"
-              src={photo || "https://via.placeholder.com/150"}
+              src={photo || "    https://static.vecteezy.com/system/resources/previews/021/548/095/original/default-profile-picture-avatar-user-avatar-icon-person-icon-head-icon-profile-picture-icons-default-anonymous-user-male-and-female-businessman-photo-placeholder-social-network-avatar-portrait-free-vector.jpg"}
               alt="Profile Preview"
             />
           </motion.div>
