@@ -13,6 +13,9 @@ import Footer from './components/Footer';
 import Signup from './components/Signup';
 import Connection from './components/Connection';
 import Request from './components/Request';
+import Forgotpassword from './components/Forgotpassword';
+import Resetpassword from './components/Resetpassword';
+import Premium from './components/Premium';
 const App = () => {
 
   // const userdata=useSelector((store)=>store.user.user);
@@ -32,8 +35,11 @@ const App = () => {
             <Route path="/profile" element={<Profile />} />
             <Route path='/signup' element={<Signup />} />
             <Route path="/login" element={<Login />} />
+            <Route path='/premium' element={<Premium/>}/>
             <Route path="/connection" element={<Connection />} />
             <Route path="/request" element={<Request />} />
+            <Route path='/forgotpassword' element={<Forgotpassword/>}/>
+            <Route path="/reset-password/:token" element={<Resetpassword />} />
           </Routes>
           <ToastContainer
   position="bottom-right"

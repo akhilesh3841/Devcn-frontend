@@ -3,7 +3,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { removeFeed } from "../utils/feedslice";
 import { motion } from "framer-motion"; // Import Framer Motion
-
+import { Base_url } from "../utils/helper";
 const UserCard = ({ _id, firstName, gender, lastName, skills, age, about, photoUrl }) => {
   const dispatch = useDispatch();
 
@@ -16,7 +16,7 @@ const UserCard = ({ _id, firstName, gender, lastName, skills, age, about, photoU
 
     try {
       const res = await axios.post(
-        `http://localhost:3000/req/send/${status}/${toUserId}`,
+        `${Base_url}/req/send/${status}/${toUserId}`,
         {},
         { withCredentials: true }
       );
@@ -44,7 +44,7 @@ const UserCard = ({ _id, firstName, gender, lastName, skills, age, about, photoU
       {/* User Image */}
       <figure className="px-6 pt-6">
         <motion.img
-          src={photoUrl || "https://via.placeholder.com/150"} // Fallback for missing image
+          src={photoUrl || " https://static.vecteezy.com/system/resources/previews/021/548/095/original/default-profile-picture-avatar-user-avatar-icon-person-icon-head-icon-profile-picture-icons-default-anonymous-user-male-and-female-businessman-photo-placeholder-social-network-avatar-portrait-free-vector.jpg"} // Fallback for missing image
           alt="User Profile"
           className="rounded-full w-32 h-32 object-cover border-4 border-white shadow-lg"
           whileHover={{ scale: 1.1 }}

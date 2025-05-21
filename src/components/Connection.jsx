@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addconnection } from '../utils/connectionslice';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { Base_url } from '../utils/helper';
 
 const Connection = () => {
   const connectiondata = useSelector((store) => store.connection.connection);
@@ -11,7 +12,7 @@ const Connection = () => {
 
   const handleAcceptedRequest = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/userdata/pending/accepted", {
+      const response = await axios.get(Base_url+"/userdata/pending/accepted", {
         withCredentials: true
       });
       dispatch(addconnection(response.data.data));
