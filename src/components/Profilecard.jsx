@@ -7,11 +7,8 @@ const Profilecard = ({ _id, firstName,gender, lastName, skills, age, about, phot
         <figure>
           <img
             className='rounded-lg w-52 mt-5'
-<<<<<<< HEAD
             src={photoUrl||"https://static.vecteezy.com/system/resources/previews/021/548/095/original/default-profile-picture-avatar-user-avatar-icon-person-icon-head-icon-profile-picture-icons-default-anonymous-user-male-and-female-businessman-photo-placeholder-social-network-avatar-portrait-free-vector.jpg"}  // ✅ Use default image
-=======
-            src={photoUrl||"    https://static.vecteezy.com/system/resources/previews/021/548/095/original/default-profile-picture-avatar-user-avatar-icon-person-icon-head-icon-profile-picture-icons-default-anonymous-user-male-and-female-businessman-photo-placeholder-social-network-avatar-portrait-free-vector.jpg"}  // ✅ Use default image
->>>>>>> b9ff88ae9777adcd5a77fbe14ca10ecfe2893454
+
             alt="User Profile" />
         </figure>
         <div className="card-body">

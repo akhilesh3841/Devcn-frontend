@@ -29,11 +29,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gradient-to-r from-blue-500 to-purple-600 shadow-lg px-6 py-4 flex justify-between items-center w-full relative">
-<<<<<<< HEAD
-      {/* Left Side: Logo &ck Brand Name */}
-=======
-      {/* Left Side: Logo & Brand Name */}
->>>>>>> b9ff88ae9777adcd5a77fbe14ca10ecfe2893454
+
       <div className="flex items-center space-x-4">
         <img className="w-10 h-10 rounded-full border-2 border-white shadow-sm" src={logo} alt="Logo" />
         <Link to="/" className="text-2xl font-bold text-white hover:text-gray-200 transition duration-300">
@@ -85,15 +81,13 @@ const Navbar = () => {
                       Requests
                     </Link>
                   </li>
-<<<<<<< HEAD
 
                     <li>
                     <Link to="/premium" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition duration-300">
                     Add Premium
                     </Link>
                   </li>
-=======
->>>>>>> b9ff88ae9777adcd5a77fbe14ca10ecfe2893454
+
                   <li>
                     <button onClick={handleLogout} className="w-full text-left px-4 py-2 text-red-600 hover:bg-red-50 transition duration-300">
                       Logout

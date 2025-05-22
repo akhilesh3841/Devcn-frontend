@@ -24,12 +24,9 @@ const Login = () => {
     const loginhandler = async () => {
         try {
             const response = await axios.post(
-<<<<<<< HEAD
-                Base_url + '/login',
-=======
+
                 Base_url+'/login',
->>>>>>> b9ff88ae9777adcd5a77fbe14ca10ecfe2893454
-                {
+               {
                     emailId: emailId,
                     password: password,
                 },

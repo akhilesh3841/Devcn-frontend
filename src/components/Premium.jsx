@@ -8,6 +8,7 @@ const Premium = () => {
       const res = await axios.post(
         `${Base_url}/payment/createpay`,
         { membershipType: type },
+        
         { withCredentials: true }
       );
 
