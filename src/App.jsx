@@ -16,6 +16,7 @@ import Request from './components/Request';
 import Forgotpassword from './components/Forgotpassword';
 import Resetpassword from './components/Resetpassword';
 import Premium from './components/Premium';
+import Chat from './components/Chat';
 const App = () => {
 
   // const userdata=useSelector((store)=>store.user.user);
@@ -40,6 +41,7 @@ const App = () => {
             <Route path="/request" element={<Request />} />
             <Route path='/forgotpassword' element={<Forgotpassword/>}/>
             <Route path="/reset-password/:token" element={<Resetpassword />} />
+            <Route path='/chat/:targetuserid' element={<Chat/>}/>
           </Routes>
           <ToastContainer
   position="bottom-right"

@@ -78,7 +78,7 @@ const Request = () => {
       transition={{ duration: 0.5 }}
       className="h-screen bg-gray-100 py-6"
     >
-      <div className="text-center mb-6">
+      <div className="text-center mb-6 mt-10">
         <h1 className="text-3xl font-bold text-gray-800">Pending Requests</h1>
       </div>
       <div className="flex flex-wrap justify-center gap-6">
