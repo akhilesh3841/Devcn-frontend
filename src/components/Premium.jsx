@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Base_url } from '../utils/helper';
-
+import { useDispatch } from 'react-redux';
+import { setPremium } from '../utils/userslice';
 const Premium = () => {
   const [userPremium, setUserPremium] = useState(null); // null = loading, true/false = actual value
+  const dispatch=useDispatch();
 
   const verifyPremiumUser = async () => {
     try {
       const res = await axios.get(`${Base_url}/payment/premiumverify`, {
         withCredentials: true,
       });
+
       setUserPremium(res.data.isPremium);
+      dispatch( setPremium(res.data.isPremium));
     } catch (error) {
       console.error("Error verifying premium:", error.message);
     }

@@ -12,8 +12,17 @@ const userslice = createSlice({
     removeUser: (state) => { 
       state.user = null; // ✅ action की जरूरत नहीं
     },
+
+
+      setPremium: (state, action) => {
+      if (state.user) {
+        state.user.isPremium = action.payload;
+      }
+    },
+
+
   },
 });
 
-export const { addUser, removeUser } = userslice.actions;
+export const { addUser, removeUser,setPremium } = userslice.actions;
 export default userslice.reducer;
